@@ -1,0 +1,369 @@
+/* Define style for certain HTML elements */
+body {
+    /*background-color: powderblue;*/
+	background-image:url('image11.png');
+}
+h1 {
+    color: DarkGoldenRod;
+}
+p {
+    color: red;
+	border: 1px solid orange;
+    padding: 30px; /* Defines a padding (space) between the text and the border */
+	margin: 20px; /* Defines a margin (space) outside the border */
+}
+
+
+/* Use IDs (specific per element) to to specify styles */
+#p01 {
+    color: SlateGrey;
+}
+
+/* Use class (similar to IDs but for groups) to to specify styles */
+p.error {
+    color: SeaGreen;
+}
+
+.test {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+} 
+
+/* Specify styles for links */
+/* unvisited link */
+a:link { 
+    color: green; 
+    text-decoration: underline;
+}
+
+/* visited link */
+a:visited {
+    color: DarkBlue;
+    text-decoration: underline;
+}
+
+/* mouse over link */
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+    color: yellow;
+    text-decoration: underline;
+}
+
+/* Specify styles for images */
+img { 
+    width: 100%; 
+}
+
+/* Specify styles for tables */
+table, th, td {
+    border: 1px solid black;
+	border-collapse: collapse; /* Makes border single line */
+	/*border-spacing: 5px;  Specifies space between cells - only use if NOT collapsing borders*/
+	padding: 15px;
+	text-align: left;
+}
+
+/* Specify styles for tables using and ID */
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+
+/* eg
+tr:hover {background-color: #f5f5f5;}
+tr:nth-child(even) {background-color: #f2f2f2;}
+*/
+
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+
+/* Styles for unordered lists */
+ul {
+    background-color: red;
+}
+
+/* Styles for forms/user input */
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+
+/* Colors
+ <!-- COLORS 
+AliceBlue 	
+AntiqueWhite
+Aqua 	
+Aquamarine
+Azure 	
+Beige 	
+Bisque 	
+Black 	
+BlanchedAlmond
+Blue 	
+BlueViolet
+Brown 	
+BurlyWood
+CadetBlue
+Chartreuse
+Chocolate
+Coral 	
+CornflowerBlue
+Cornsilk
+Crimson 
+Cyan 	
+DarkBlue
+DarkCyan
+DarkGoldenRod
+DarkGray
+DarkGrey
+DarkGree
+DarkKhaki
+DarkMagenta
+DarkOlive
+DarkOrange
+DarkOrchid
+DarkRed 
+DarkSalmon
+DarkSeaGreen
+DarkSlateBlue
+DarkSlateGray
+DarkSlateGrey
+DarkTurquoise
+DarkViolet
+DeepPink
+DeepSkyBlue
+DimGray 
+DimGrey 
+DodgerBlue
+FireBrick
+FloralWhite
+ForestGreen
+Fuchsia 
+Gainsboro
+GhostWhite
+Gold 	
+GoldenRod
+Gray 	
+Grey 	
+Green 	
+GreenYellow
+HoneyDew
+HotPink 
+IndianRed
+Indigo  
+Ivory 	
+Khaki 	
+LavenderBlush
+LavenderGreen
+LawnGreen
+LemonChiffon
+LightBlue
+LightCoral
+LightCyan
+LightGoldenRodYellow
+LightGray
+LightGrey
+LightGreen
+LightPink
+LightSalmon
+LightSeaGreen
+LightSkyBlue
+LightSlateGray
+LightSlateGrey
+LightSteelBlue
+LightYellow
+Lime 	
+LimeGreen
+Linen 	
+Magenta 
+Maroon 	
+MediumAquaMarine
+MediumBlue
+MediumOrchid
+MediumPurple
+MediumSeaGreen
+MediumSlateBlue
+MediumSpringGreen
+MediumTurquoise
+MediumVioletRed
+MidnightBlue
+MintCream
+MistyRose
+Moccasin
+NavajoWhite
+Navy 	
+OldLace 
+Olive 	
+OliveDrab
+Orange 	
+OrangeRed
+Orchid 	
+PaleGoldenRod
+PaleGreen
+PaleTurquoise
+PaleViolet
+PapayaWhip
+PeachPuff
+Peru 	
+Pink 	
+Plum 	
+PowderBlue
+Purple 	
+RebeccaPurple
+Red 	
+RosyBrown
+RoyalBlue
+SaddleBrown
+Salmon 	
+SandyBrown
+SeaGreen
+SeaShell
+Sienna 	
+Silver 	
+SkyBlue 
+SlateBlue
+SlateGray
+SlateGrey 	
+Snow 	
+SpringGreen 
+SteelBlue 	
+Tan 	
+Teal 	
+Thistle 	
+Tomato 
+Transparent	
+Turquoise 
+Violet 	
+Wheat 	
+White 
+WhiteSmoke 	
+Yellow 	
+YellowGreen 
+
+
+-- Border Styles 
+dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border
+
+- Other styles
+border-top-style: 
+border-radius: [for rounded corners]
+
+
+- Margins and padding can also be used
+padding-top
+padding-right
+padding-bottom
+padding-left
+margin: auto;
+
+
+
+- Height and width can be adjusted
+
+
+-- Outline can be used around objects
+outline-style
+outline-color
+outline-width
+outline-offset
+outline
+
+
+- Can be transformed or altered
+eg
+text-transform: uppercase;
+text-transform: captilize;
+text-align: center;
+letter-spacing:
+word-spacing:
+text-indent:
+line-height:
+text-shadow:
+font-variant: small-caps;
+
+- Can modify/transform lists
+list-style-type: circle
+list-style-type: none;
+list-style-position: inside;
+
+- Can transform HOW text is displayed
+
+li {
+    display: inline;
+	display: inline-block;
+	display: block;
+}
+
+- Position can be adjusted
+postion: static
+relative
+fixed
+absolute
+sticky
+
+- Add scroll bars when window is small-caps
+overflow:visible - Default. The overflow is not clipped. It renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content will be invisible
+scroll - The overflow is clipped, but a scrollbar is added to see the rest of the content
+auto - If overflow is clipped, a scrollbar should be added to see the rest of the content
+
+- Pictures can be adjusted
+float: right;
+
+- Clear
+
+clear:none - Allows floating elements on both sides. This is default
+left - No floating elements allowed on the left side
+right- No floating elements allowed on the right side
+both - No floating elements allowed on either the left or the right side
+inherit - The element inherits the clear value of its paren
+
+
+- Clear fix hack (makes tables/borders fit around floated images)
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+Display boxes side by side
+
+.img-container {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/*
+

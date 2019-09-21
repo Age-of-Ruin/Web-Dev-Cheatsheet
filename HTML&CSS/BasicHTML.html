@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<!-- head - Used for meta data of ENTIRE PAGE (ie not displayed) -->
+	<head> 
+		<title>Page Title</title> <!-- Title - shown in tab -->
+		
+		<meta charset="UTF-8"> <!-- Character Set -->
+		<meta name="description" content="Basics of HTML"> <!-- Description -->
+		<meta name="keywords" content="HTML, CSS, JavaScript"> <!-- Keywords - for search engine -->
+		<meta name="author" content="Richard Constantine"> <!-- Author -->
+		<meta http-equiv="refresh" content="30"> <!-- Refresh document every 30 seconds -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the page to follow screen width and will load with a zoom of 1.0 - INCLUDE IN ALL PAGES -->
+		
+		<!-- STYLE - used to style entire document
+			<style>
+				body {background-color: powderblue;}
+				h1   {color: blue;}
+				p    {color: red;}
+			</style>
+		-->
+		
+		<!-- LINK/STYLE/CSS - used to style entire document (EXTERNAL CSS file needed) -->
+		<link rel="stylesheet" href="styles.css">
+		
+	</head>
+	
+	<!-- body - Used for webpage (ie will be displayed) - INLINE style/CSS can be used on body statement -->
+	<body> 
+
+		<!-- HEADINGS -->
+		<h1 title="HEADING 1 TOOLTIP">This is heading 1 (mouse over for tooltip)</h1>
+		<h2 style="font-size:60px;">This is heading 2</h2>
+		<h3 style="font-family:arial black;">This is heading 3</h3>
+		<h4 style="font-size:300%;">This is heading 4</h4>
+		<h5 style="text-align:center;">This is heading 5</h5>
+		<h6 style="background-color:red;">This is heading 6</h6>  <!-- Header 6 is the last header -->
+		<h7>This is heading 7</h7>  <!-- Header 7 appears as a paragraph -->
+		<h8>This is heading 8</h8>
+
+		<h1 style="font-size:5vw">Adjusts with window size.</h1> <!-- Header that adjusts with v -->
+		
+		<!-- PARAGRAPHS -->
+		<p style="color:yellow">I am a paragraph.</p>  <!-- Style can specify color, font, size, etc. -->
+		<p title="PARAGRAPH 2 TOOLTIP"> This is another paragraph (mouse over for tooltip).</p>
+		<P style="border:2px solid Azure;">This is another paragraph</p>
+		<p id="p01">This is another paragraph.</p> <!-- Style specified by ID - refer to styles.css -->
+		<p class="error">This is another paragraph.</p> <!-- Style specified by class (similar to ID) - refer to styles.css -->
+		<p>This is <br> another paragraph.</p> <!-- <br> defines line break -->		
+					
+<!-- Preformatted text - fixed width font (usually Courier) keeps spaces and lines breaks -->
+<h3>The pre tag preserves both spaces and line breaks:</h3>
+
+<pre>
+   My Bonnie lies over the ocean.
+
+   My Bonnie lies over the sea.
+
+   My Bonnie lies over the ocean.
+   
+   Oh, bring back my Bonnie to me.
+</pre>
+		
+		<!-- BLOCK-LEVEL - starts new line and takes full width available -->
+		<div>Hello</div>
+		<div>World</div>
+		
+		<!--SPAN - does not start new line (inline appends them as words) -->
+		<span>Hello</span>
+		<span>World</span>
+		
+		<!-- LINKS -->
+		<div><a href="https://www.w3schools.com" title="Go to W3Schools HTML section" target="_blank">This is a link to https://www.w3schools.com.</a><div> <!-- title adds tooltip -->
+				
+		<!-- BOOKMARK - jump to bookmark ID (below) -->
+		<div><a href="#Colors">Jump to Colors</a><div>
+
+		<!-- TARGET - specifies where to open link
+			_blank - Opens the linked document in a new window or tab
+			_self - Opens the linked document in the same window/tab as it was clicked (this is default)
+			_parent - Opens the linked document in the parent frame
+			_top - Opens the linked document in the full body of the window
+			framename - Opens the linked document in a named frame
+		-->
+		
+		<!-- IMAGES - can use links -->
+		<img src="w3schools.jpg" alt="Can't find file." width="104" height="142"> <!-- Alt specifies alternate text to be displayed when image cannot -->
+		<img src="w3schools.jpg" alt="Can't find file." style="width:128px;height:128px;"> <!-- Style overrides stylesheet (ie CSS doc) -->
+		<p><img src="w3schools.jpg" alt="Can't find file." style="float:right;width:42px;height:42px;">The image will float to the right of the text.</p>
+		
+		<h3 style="font-size:10vw">Resize browser and it will adjust.</h3>
+		<img src="w3schools.jpg" style="max-width:25%;height:auto;">
+		
+		<!-- HTML5 pictures -->
+		<h3>Resize browser and it will adjust.</h3>
+		<picture>
+		  <source media="(min-width: 650px)" srcset="img_pink_flowers.jpg">
+		  <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+		  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+		</picture>
+		
+		<!-- IMAGE MAPs - images with clickable parts/links -->
+		<h3>Click on the computer, the phone, or the cup of coffee to for more links to https://www.w3schools.com</h3>
+		<img src="workplace.jpg" alt="Workplace" usemap="#workmap" style="width:400px;height:379px;">
+		<map name="workmap">
+		  <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com">
+		  <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com">
+		  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://www.w3schools.com">
+		</map>
+		
+		<!-- IMAGES & LINKS COMBINED-->
+		<a href="https://www.w3schools.com" target="_blank">
+		<img src="image11.png" alt="Can't find file." style="width:42px;height:42px;">
+		</a>
+		
+		<!-- Horizontal Rule (ie horizontal line across page - separates content) -->
+		<hr>
+		
+		<!-- BUTTONS -->
+		<button>Click me</button>
+		
+		<!-- LISTS -->
+		<!-- unordered lists -->
+		<ul style="list-style-type:circle">
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Milk</li>
+		</ul>
+		
+		<ul style="list-style-type:square">
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Milk</li>
+		</ul>
+		
+		<!-- ordered lists -->
+		<ol start="50">
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Milk</li>
+		</ol>
+		
+		<!-- NOTE for ordered lists
+			type="1"	The list items will be numbered with numbers (default)
+			type="A"	The list items will be numbered with uppercase letters
+			type="a"	The list items will be numbered with lowercase letters
+			type="I"	The list items will be numbered with uppercase roman numbers
+			type="i"	The list items will be numbered with lowercase roman numbers
+		-->
+		
+		<!-- descriptive lists -->
+		<dl>
+		  <dt>Coffee</dt>
+		  <dd>- black hot drink</dd>
+		  <dt>Milk</dt>
+		  <dd>- white cold drink</dd>
+		</dl>
+		
+		<!-- NOTE for descriptive lists
+			<dl> defines list
+			<dt> defines name of item
+			<dd> defines tag/description
+		-->
+		
+		<!-- nested lists -->
+		<ul>
+		  <li>Coffee</li>
+		  <li>Tea
+			<ul>
+			  <li>Black tea</li>
+			  <li>Green tea</li>
+			</ul>
+		  </li>
+		  <li>Milk</li>
+		</ul>
+		
+		<!-- TABLES -->	
+		<table id="t01">
+		  <caption>Basic Table</caption>
+		  <tr>
+			<th>Firstname</th>
+			<th>Lastname</th> 
+			<th>Age</th>
+		  </tr>
+		  <tr>
+			<td>Jill</td>
+			<td>Smith</td> 
+			<td>50</td>
+		  </tr>
+		  <tr>
+			<td>Eve</td>
+			<td>Jackson</td> 
+			<td>94</td>
+		  </tr>
+		</table>
+		
+		<!-- Rows spanning many columns -->	
+		<table style="color: SeaGreen;">
+		  <caption>Rows spanning many columns</caption>
+		  <tr>
+			<th>Name</th>
+			<th colspan="2">Telephone</th>
+		  </tr>
+		  <tr>
+			<td>Bill Gates</td>
+			<td>55577854</td>
+			<td>55577855</td>
+		  </tr>
+		</table>
+		
+		<!-- Cols spanning many rows -->	
+		<table style="width:100%">
+		  <caption>Columns spanning many rows </caption>
+		  <tr>
+			<th>Name:</th>
+			<td>Bill Gates</td>
+		  </tr>
+		  <tr>
+			<th rowspan="2">Telephone:</th>
+			<td>55577854</td>
+		  </tr>
+		  <tr>
+			<td>55577855</td>
+		  </tr>
+		</table>
+		
+		<!-- NOTE for tables
+			<tr> specifies rows
+			<th> specifies header
+			<td> specifies data
+		-->
+		
+		<!-- QUOTES -->
+		<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p> <!--<q> adds double quotes (or see notes below) -->
+		
+		<!-- <blockquote> addes a blockquote -->
+		<p>Here is a quote from WWF's website:</p>
+			<blockquote cite="http://www.worldwildlife.org/who/index.html">
+				For 50 years, WWF has been protecting the future of nature.
+				The world's leading conservation organization,
+				WWF works in 100 countries and is supported by
+				1.2 million members in the United States and
+				close to 5 million globally.
+			</blockquote>
+			
+		<!-- ABREVIATIONS - adds tooltip -->
+		<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948 (mouse over for tooltip).</p>
+			
+		<!-- CITE - used for citing - makes text italic -->
+		<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+		
+		<!-- BI-DIRECTIONAL OVERRIDE - writes things in reverse -->
+		<div><bdo dir="rtl">This line will be written from right to left</bdo><div>
+		
+		
+		<!-- IFRAME - display webpage within webpage-->
+		<iframe src="BasicFormatting.html" style="border:2px solid red;"></iframe>
+		
+		<!-- open ifram with a link (NOT WORKING) -->
+		<iframe src="BasicFormatting.html" name="iframe_a"></iframe>
+		<h2><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></h2>
+		
+			
+		<!-- JAVA SCRIPT - CHANGE element with ID test -->
+		<button onclick="displayResult()">Change text</button>
+		<script>
+		function displayResult() {
+			document.getElementById("myHeader").innerHTML = "Have a nice day!";
+		}
+		</script>
+		<h1 id="myHeader">Hello World!</h1>
+		
+		<!-- JAVA SCRIPT - hide elements with class test (ie colors) -->
+		<button onclick="myFunction()">Hide Colors</button>
+		<script>
+		function myFunction() {
+		  var x = document.getElementsByClassName("test");
+		  for (var i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		  }
+		}
+		</script>
+		
+		<!-- BOOKMARK - jump to here when bookmark is pressed -->
+		<h2 id="Colors">Colors</h2>
+		
+		<!-- COLORS - 4th parameter (alpha) can be added for transparency eg RGBA and HSLA -->
+		<!-- NOTE - declare multiple classes using space eg class="test1 test2" - can be used to share styles between different elements -->
+		
+		<!-- COLORS USING RGB - set all equal for shades ie black, grey and white -->
+		<h1 class="test" style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</h1>
+		<h1 class="test" style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</h1>
+		<h1 class="test" style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</h1>
+		<h1 class="test" style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</h1>
+		<h1 class="test" style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</h1>
+		<h1 class="test" style="background-color:rgb(106, 90, 205);">rgb(106, 90, 205)</h1>
+		
+		<hr>
+		
+		<!-- COLORS USING HEX - set all equal for shades ie black, grey and white -->		
+		<h1 class="test" style="background-color:#ff0000;">#ff0000</h1>
+		<h1 class="test" style="background-color:#0000ff;">#0000ff</h1>
+		<h1 class="test" style="background-color:#3cb371;">#3cb371</h1>
+		<h1 class="test" style="background-color:#ee82ee;">#ee82ee</h1>
+		<h1 class="test" style="background-color:#ffa500;">#ffa500</h1>
+		<h1 class="test" style="background-color:#6a5acd;">#6a5acd</h1>
+		
+		<hr>
+		
+		<!-- HUE, SATURATION & LIGHTNESS (HSL) - shades by setting H = S = 0% and adjusting lightness -->		
+		<h1 class="test" style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+		<h1 class="test" style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</h1>
+		<h1 class="test" style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</h1>
+		<h1 class="test" style="background-color:hsl(300, 76%, 72%);">hsl(300, 76%, 72%)</h1>
+		<h1 class="test" style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</h1>
+		<h1 class="test" style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</h1>
+		
+		<!-- FORM for user input -->	
+		<form>
+		  <input type="text" name="search" placeholder="Search..">
+		</form>
+		
+		<!-- ADDRESS - used for address info - makes text italic -->
+		<address>
+			Written by Richard Constantine<br>
+			Email:
+			<a href="mailto:constan7@myumanitoba.ca"> constan7@myumanitoba.ca</a>.<br>
+		</address>
+	
+	</body>
+</html>
+
+
+<!-- Formatting Elements (remember closing syntax </*>)
+	<b> - Bold text
+	<strong> - Important text - similar to bold
+	<i> - Italic text
+	<em> - Emphasized text - similar to italic
+	<mark> - Marked text - ie highlight
+	<small> - Small text - slightly smaller than current font
+	<del> - Deleted text - ie crosses out text
+	<ins> - Inserted text - ie underline
+	<sub> - Subscript text
+	<sup> - Superscript text
+	<code>	Defines programming code
+	<kbd>	Defines keyboard input 
+	<samp>	Defines computer output
+	<var>	Defines a variable
+	<pre>	Defines preformatted text
+ -->
+
+
+<!-- NOTES
+	- Not case sensitive however recommends lower case.
+	- If double quotes are needed in text then wrap with single quote instead eg 'John "Shotgun" Nelson' or "John 'Shotgun' Nelson" both work.
+	- Paragraphs will ignore lines and extra spaces - determines the number of lines using window size.
+	- 3 ways to add CSS:
+		Inline - by using the style attribute in HTML elements
+		Internal - by using a <style> element in the <head> section
+		External - by using an external CSS file
+ -->

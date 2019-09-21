@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+
+<!-- Script 1 -->
+
+<p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+
+<p id="demo1"></p>
+
+<script>
+var x, y, z;  // Statement 1
+x = 5;        // Statement 2
+y = 6;        // Statement 3
+z = x + y;    // Statement 4
+
+document.getElementById("demo1").innerHTML =
+"The value of z is " + z + ".";  
+</script>
+
+
+<!-- Script 2 -->
+
+<p>JavaScript code blocks are written between { and }</p>
+
+<button type="button" onclick="myFunction2()">Click Me!</button>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction2() {
+    document.getElementById("demo2").innerHTML = "Hello World!";
+}
+</script>
+
+
+<!-- Script 3 -->
+
+<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+    document.getElementById("demo3").innerHTML = Date();
+}
+</script>
+
+<p id="demo3"></p>
+
+
+<!-- Script 4 -->
+
+<p>This example calls a function to convert from Fahrenheit to Celsius:</p>
+<p id="demo4"></p>
+
+<script>
+function toCelsius(f) {
+    return (5/9) * (f-32);
+}
+document.getElementById("demo4").innerHTML = toCelsius(77);
+//document.getElementById("demo").innerHTML = toCelsius; -- this will return contents of function as text
+</script>
+
+
+<!-- Script 5 -->
+
+<p>An object method is a function definition, stored as a property value.</p>
+
+<p id="demo5"></p>
+
+<script>
+// Create an object:
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+// Display data from the object:
+document.getElementById("demo5").innerHTML = person.fullName();
+//document.getElementById("demo4").innerHTML = person.fullName;  -- this will return contents of the object as text
+</script>
+
+<!-- Script 6 -->
+
+<p>Original String: ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+
+<p>The length property returns the length of a string:</p>
+
+<p id="demo6a"></p>
+
+<p>The indexOf() method returns the position of the first occurrence of a specified text (in this case 'C'):</p>
+
+<p id="demo6b"></p>
+
+<p>The search() method returns the position of the first occurrence of a specified text in a string (in this case 'C'):</p>
+
+<p id="demo6c"></p>
+
+<p>The slice() method extract a part of a string and returns the extracted parts in a new string (from 7-13):</p>
+
+<p id="demo6d"></p>
+
+<p>The charAt() method returns the character at a given position in a string (in this case 'C'):</p>
+
+<p id="demo6e"></p>
+
+<p>The concat() method joins two or more strings:</p>
+
+<p id="demo6f"></p>
+
+<p>Click the button to alert the string with removed whitespace.</p>
+
+<button onclick="myFunction6g()">Try it</button>
+
+<p>Click "Try it" to display the first array element, after a string split.</p>
+
+<button onclick="myFunction6h()">Try it</button>
+
+<p id="demo6h"></p>
+
+<script>
+var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var str2
+document.getElementById("demo6a").innerHTML = str.length;
+var pos1 = str.indexOf("C",0); // ALTERNATE: var pos = str.lastIndexOf(searchQuery, startingPos);
+document.getElementById("demo6b").innerHTML = pos1;
+var pos2 = str.search("C");
+document.getElementById("demo6c").innerHTML = pos2;
+var res = str.slice(7,13); // If parameters are negative - counts from end - ALTERNATE: var res = str.substring(7, 13) OR var res = str.substr(7, 6);
+document.getElementById("demo6d").innerHTML = res; 
+document.getElementById("demo6e").innerHTML = str.charAt(2);
+var text1 = "Hello";
+var text2 = "World!";
+var text3 = text1.concat(" ",text2);
+document.getElementById("demo6f").innerHTML = text3;
+function myFunction6g() {
+    var str = "       Hello World!       ";
+    alert(str.trim());
+}
+function myFunction6h() {
+    var str = "a,b,c,d,e,f"; 
+    var arr = str.split(","); // Splits into array using delimiter provided
+    document.getElementById("demo6h").innerHTML = arr[0];
+}
+</script>
+
+
+<!-- Script 7 -->
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction7()">Try it</button>
+
+<p id="demo7">Please visit Microsoft!</p>
+
+<script>
+function myFunction7() {
+    var str = document.getElementById("demo7").innerHTML; 
+    var txt = str.replace("Microsoft","W3Schools");
+    document.getElementById("demo7").innerHTML = txt;
+}
+</script>
+
+
+</body>
+</html>
+
+
+<!-- Note: NULL and undefined are same value but different  -->
+<!-- Note: x === y compares data types  -->
